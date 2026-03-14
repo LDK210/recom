@@ -38,6 +38,7 @@
       }
     }
   },
+  
   "hostRequirements":{
     "memory":"8GB"
   }
