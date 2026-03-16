@@ -1,27 +1,16 @@
 {
   "name": "Spark 4.0 PySpark",
-
-  // 直接使用官方镜像
   "image": "apache/spark:4.0.2-python3",
-
-  // 工作目录（镜像里 WORKDIR 是 /opt/spark/work-dir，我们就用这个）
-  "workspaceFolder": "/",
-
-
-  // VS Code 相关
+  "workspaceFolder": "/opt/spark/work-dir",
+  "remoteUser": "root",
+  "runArgs": ["--entrypoint", "/bin/bash"],
+  "overrideCommand": true,
+  "postStartCommand": "echo container ready",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "ms-toolsai.jupyter"
-      ],
-      "settings": {
-        "python.defaultInterpreterPath": "python3"
-      }
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter"],
+      "settings": {"python.defaultInterpreterPath": "python3"}
     }
   },
-  
-  "hostRequirements":{
-    "memory":"8gb"
-  }
+  "hostRequirements": {"memory": "8gb"}
 }
