@@ -5,8 +5,6 @@
   },
   "workspaceFolder": "/root/workspaces/recom",
   "remoteUser": "root",
-  "runArgs": ["--entrypoint", "/bin/bash"],
-  "overrideCommand": true,
   "postStartCommand": "echo container ready",
   "customizations": {
     "vscode": {
